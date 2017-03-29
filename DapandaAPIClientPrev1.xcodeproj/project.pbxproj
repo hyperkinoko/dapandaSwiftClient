@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B64A83AE1E2B3CF100AEFD8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83AD1E2B3CF100AEFD8B /* Message.swift */; };
+		B64A83B01E2C434400AEFD8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83AF1E2C434400AEFD8B /* User.swift */; };
+		B64A83B21E2C43F400AEFD8B /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83B11E2C43F400AEFD8B /* Mention.swift */; };
+		B691A0581DFACFFD003F1397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691A0571DFACFFD003F1397 /* AppDelegate.swift */; };
+		B691A05A1DFACFFD003F1397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691A0591DFACFFD003F1397 /* ViewController.swift */; };
+		B691A05D1DFACFFD003F1397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B691A05B1DFACFFD003F1397 /* Main.storyboard */; };
+		B691A05F1DFACFFD003F1397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B691A05E1DFACFFD003F1397 /* Assets.xcassets */; };
+		B691A0621DFACFFD003F1397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B691A0601DFACFFD003F1397 /* LaunchScreen.storyboard */; };
+		B691A06D1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691A06C1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.swift */; };
+		B691A0781DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691A0771DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.swift */; };
+		B6D85C431E6D9135003980EE /* ApiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C421E6D9135003980EE /* ApiBase.swift */; };
+		B6D85C471E6D925D003980EE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C461E6D925D003980EE /* Messages.swift */; };
+		B6D85C491E6D9459003980EE /* ApiPostTelegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C481E6D9459003980EE /* ApiPostTelegram.swift */; };
+		B6D85C4B1E6D94A7003980EE /* ApiTelegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C4A1E6D94A7003980EE /* ApiTelegram.swift */; };
+		B6D85C4D1E6D952F003980EE /* ApiGetTelegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C4C1E6D952F003980EE /* ApiGetTelegram.swift */; };
+		B6D85C4F1E6D95D5003980EE /* MessagesGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C4E1E6D95D5003980EE /* MessagesGetRequest.swift */; };
+		B6D85C511E6D9A48003980EE /* MessagesGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C501E6D9A48003980EE /* MessagesGetResponse.swift */; };
+		B6D85C551E6E4A65003980EE /* ApiDeleteTelegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C541E6E4A65003980EE /* ApiDeleteTelegram.swift */; };
+		B6D85C571E6E4F72003980EE /* ApiPutTelegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C561E6E4F72003980EE /* ApiPutTelegram.swift */; };
+		B6D85C591E6E6BBC003980EE /* ApiBaseProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C581E6E6BBC003980EE /* ApiBaseProtcol.swift */; };
+		B6D85C5B1E6E9384003980EE /* CommonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C5A1E6E9384003980EE /* CommonRequest.swift */; };
+		B6D85C5D1E6E9EB5003980EE /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D85C5C1E6E9EB5003980EE /* CommonResponse.swift */; };
+		B6E15DEA1DFC652D001745C3 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E15DE91DFC652D001745C3 /* EditViewController.swift */; };
+		B6E36C6B1DFB95F80003B3B4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E36C6A1DFB95F80003B3B4 /* CustomTableViewCell.swift */; };
+		B6E36C6D1DFBA39F0003B3B4 /* SelectChannnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E36C6C1DFBA39F0003B3B4 /* SelectChannnelViewController.swift */; };
+		B6E36C6F1DFBD1320003B3B4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E36C6E1DFBD1320003B3B4 /* PostViewController.swift */; };
+		F23E858A97793A14A8F093AB /* Pods_DapandaAPIClientPrev1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2EB26958BC780DF4EE57EF /* Pods_DapandaAPIClientPrev1.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B691A0691DFACFFD003F1397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B691A04C1DFACFFD003F1397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B691A0531DFACFFD003F1397;
+			remoteInfo = DapandaAPIClientPrev1;
+		};
+		B691A0741DFACFFD003F1397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B691A04C1DFACFFD003F1397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B691A0531DFACFFD003F1397;
+			remoteInfo = DapandaAPIClientPrev1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D2EB26958BC780DF4EE57EF /* Pods_DapandaAPIClientPrev1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DapandaAPIClientPrev1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		695E92AE6544950CE896D424 /* Pods-DapandaAPIClientPrev1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DapandaAPIClientPrev1.release.xcconfig"; path = "Pods/Target Support Files/Pods-DapandaAPIClientPrev1/Pods-DapandaAPIClientPrev1.release.xcconfig"; sourceTree = "<group>"; };
+		7F6D6F8DEE579AD033EEA390 /* Pods-DapandaAPIClientPrev1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DapandaAPIClientPrev1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DapandaAPIClientPrev1/Pods-DapandaAPIClientPrev1.debug.xcconfig"; sourceTree = "<group>"; };
+		B64A83AD1E2B3CF100AEFD8B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B64A83AF1E2C434400AEFD8B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B64A83B11E2C43F400AEFD8B /* Mention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mention.swift; sourceTree = "<group>"; };
+		B691A0541DFACFFD003F1397 /* DapandaAPIClientPrev1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DapandaAPIClientPrev1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B691A0571DFACFFD003F1397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B691A0591DFACFFD003F1397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B691A05C1DFACFFD003F1397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B691A05E1DFACFFD003F1397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B691A0611DFACFFD003F1397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B691A0631DFACFFD003F1397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B691A0681DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DapandaAPIClientPrev1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B691A06C1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapandaAPIClientPrev1Tests.swift; sourceTree = "<group>"; };
+		B691A06E1DFACFFD003F1397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B691A0731DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DapandaAPIClientPrev1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B691A0771DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DapandaAPIClientPrev1UITests.swift; sourceTree = "<group>"; };
+		B691A0791DFACFFD003F1397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D85C421E6D9135003980EE /* ApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiBase.swift; sourceTree = "<group>"; };
+		B6D85C461E6D925D003980EE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		B6D85C481E6D9459003980EE /* ApiPostTelegram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPostTelegram.swift; sourceTree = "<group>"; };
+		B6D85C4A1E6D94A7003980EE /* ApiTelegram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTelegram.swift; sourceTree = "<group>"; };
+		B6D85C4C1E6D952F003980EE /* ApiGetTelegram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiGetTelegram.swift; sourceTree = "<group>"; };
+		B6D85C4E1E6D95D5003980EE /* MessagesGetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesGetRequest.swift; sourceTree = "<group>"; };
+		B6D85C501E6D9A48003980EE /* MessagesGetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesGetResponse.swift; sourceTree = "<group>"; };
+		B6D85C541E6E4A65003980EE /* ApiDeleteTelegram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDeleteTelegram.swift; sourceTree = "<group>"; };
+		B6D85C561E6E4F72003980EE /* ApiPutTelegram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPutTelegram.swift; sourceTree = "<group>"; };
+		B6D85C581E6E6BBC003980EE /* ApiBaseProtcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiBaseProtcol.swift; sourceTree = "<group>"; };
+		B6D85C5A1E6E9384003980EE /* CommonRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonRequest.swift; sourceTree = "<group>"; };
+		B6D85C5C1E6E9EB5003980EE /* CommonResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
+		B6E15DE91DFC652D001745C3 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		B6E36C6A1DFB95F80003B3B4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = ../CustomTableViewCell.swift; sourceTree = "<group>"; };
+		B6E36C6C1DFBA39F0003B3B4 /* SelectChannnelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectChannnelViewController.swift; sourceTree = "<group>"; };
+		B6E36C6E1DFBD1320003B3B4 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		F053756F99FDFE1D60AC990C /* Pods_DapandaAPIClientPrev1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DapandaAPIClientPrev1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14FE94FADC34E512B804BE9 /* Pods_DapandaAPIClientPrev1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DapandaAPIClientPrev1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B691A0511DFACFFD003F1397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23E858A97793A14A8F093AB /* Pods_DapandaAPIClientPrev1.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B691A0651DFACFFD003F1397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B691A0701DFACFFD003F1397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		936B581A8CDB3DE97E3F6AE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F6D6F8DEE579AD033EEA390 /* Pods-DapandaAPIClientPrev1.debug.xcconfig */,
+				695E92AE6544950CE896D424 /* Pods-DapandaAPIClientPrev1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B691A04B1DFACFFD003F1397 = {
+			isa = PBXGroup;
+			children = (
+				B691A0561DFACFFD003F1397 /* DapandaAPIClientPrev1 */,
+				B691A06B1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests */,
+				B691A0761DFACFFD003F1397 /* DapandaAPIClientPrev1UITests */,
+				B691A0551DFACFFD003F1397 /* Products */,
+				936B581A8CDB3DE97E3F6AE4 /* Pods */,
+				B9090FFF13533EFB8EF2C31D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B691A0551DFACFFD003F1397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B691A0541DFACFFD003F1397 /* DapandaAPIClientPrev1.app */,
+				B691A0681DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.xctest */,
+				B691A0731DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B691A0561DFACFFD003F1397 /* DapandaAPIClientPrev1 */ = {
+			isa = PBXGroup;
+			children = (
+				B6D85C531E6DA116003980EE /* dapandaSwift */,
+				B6D85C521E6DA034003980EE /* blancoRestSwift */,
+				B6E36C6A1DFB95F80003B3B4 /* CustomTableViewCell.swift */,
+				B691A0571DFACFFD003F1397 /* AppDelegate.swift */,
+				B691A0591DFACFFD003F1397 /* ViewController.swift */,
+				B691A05B1DFACFFD003F1397 /* Main.storyboard */,
+				B691A05E1DFACFFD003F1397 /* Assets.xcassets */,
+				B691A0601DFACFFD003F1397 /* LaunchScreen.storyboard */,
+				B691A0631DFACFFD003F1397 /* Info.plist */,
+				B6E36C6C1DFBA39F0003B3B4 /* SelectChannnelViewController.swift */,
+				B6E36C6E1DFBD1320003B3B4 /* PostViewController.swift */,
+				B6E15DE91DFC652D001745C3 /* EditViewController.swift */,
+			);
+			path = DapandaAPIClientPrev1;
+			sourceTree = "<group>";
+		};
+		B691A06B1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B691A06C1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.swift */,
+				B691A06E1DFACFFD003F1397 /* Info.plist */,
+			);
+			path = DapandaAPIClientPrev1Tests;
+			sourceTree = "<group>";
+		};
+		B691A0761DFACFFD003F1397 /* DapandaAPIClientPrev1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B691A0771DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.swift */,
+				B691A0791DFACFFD003F1397 /* Info.plist */,
+			);
+			path = DapandaAPIClientPrev1UITests;
+			sourceTree = "<group>";
+		};
+		B6D85C521E6DA034003980EE /* blancoRestSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B6D85C481E6D9459003980EE /* ApiPostTelegram.swift */,
+				B6D85C4A1E6D94A7003980EE /* ApiTelegram.swift */,
+				B6D85C4C1E6D952F003980EE /* ApiGetTelegram.swift */,
+				B6D85C421E6D9135003980EE /* ApiBase.swift */,
+				B6D85C541E6E4A65003980EE /* ApiDeleteTelegram.swift */,
+				B6D85C561E6E4F72003980EE /* ApiPutTelegram.swift */,
+				B6D85C581E6E6BBC003980EE /* ApiBaseProtcol.swift */,
+				B6D85C5A1E6E9384003980EE /* CommonRequest.swift */,
+				B6D85C5C1E6E9EB5003980EE /* CommonResponse.swift */,
+			);
+			name = blancoRestSwift;
+			sourceTree = "<group>";
+		};
+		B6D85C531E6DA116003980EE /* dapandaSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B64A83AD1E2B3CF100AEFD8B /* Message.swift */,
+				B6D85C461E6D925D003980EE /* Messages.swift */,
+				B64A83AF1E2C434400AEFD8B /* User.swift */,
+				B64A83B11E2C43F400AEFD8B /* Mention.swift */,
+				B6D85C4E1E6D95D5003980EE /* MessagesGetRequest.swift */,
+				B6D85C501E6D9A48003980EE /* MessagesGetResponse.swift */,
+			);
+			name = dapandaSwift;
+			sourceTree = "<group>";
+		};
+		B9090FFF13533EFB8EF2C31D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2EB26958BC780DF4EE57EF /* Pods_DapandaAPIClientPrev1.framework */,
+				F14FE94FADC34E512B804BE9 /* Pods_DapandaAPIClientPrev1Tests.framework */,
+				F053756F99FDFE1D60AC990C /* Pods_DapandaAPIClientPrev1UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B691A0531DFACFFD003F1397 /* DapandaAPIClientPrev1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B691A07C1DFACFFD003F1397 /* Build configuration list for PBXNativeTarget "DapandaAPIClientPrev1" */;
+			buildPhases = (
+				1AF5FD6B9D34B4F0DB01A633 /* [CP] Check Pods Manifest.lock */,
+				B691A0501DFACFFD003F1397 /* Sources */,
+				B691A0511DFACFFD003F1397 /* Frameworks */,
+				B691A0521DFACFFD003F1397 /* Resources */,
+				6BD1070015B809DC65284435 /* [CP] Embed Pods Frameworks */,
+				98A6C25A813C38D2025FF60F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DapandaAPIClientPrev1;
+			productName = DapandaAPIClientPrev1;
+			productReference = B691A0541DFACFFD003F1397 /* DapandaAPIClientPrev1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B691A0671DFACFFD003F1397 /* DapandaAPIClientPrev1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B691A07F1DFACFFD003F1397 /* Build configuration list for PBXNativeTarget "DapandaAPIClientPrev1Tests" */;
+			buildPhases = (
+				B691A0641DFACFFD003F1397 /* Sources */,
+				B691A0651DFACFFD003F1397 /* Frameworks */,
+				B691A0661DFACFFD003F1397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B691A06A1DFACFFD003F1397 /* PBXTargetDependency */,
+			);
+			name = DapandaAPIClientPrev1Tests;
+			productName = DapandaAPIClientPrev1Tests;
+			productReference = B691A0681DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B691A0721DFACFFD003F1397 /* DapandaAPIClientPrev1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B691A0821DFACFFD003F1397 /* Build configuration list for PBXNativeTarget "DapandaAPIClientPrev1UITests" */;
+			buildPhases = (
+				B691A06F1DFACFFD003F1397 /* Sources */,
+				B691A0701DFACFFD003F1397 /* Frameworks */,
+				B691A0711DFACFFD003F1397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B691A0751DFACFFD003F1397 /* PBXTargetDependency */,
+			);
+			name = DapandaAPIClientPrev1UITests;
+			productName = DapandaAPIClientPrev1UITests;
+			productReference = B691A0731DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B691A04C1DFACFFD003F1397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = kinokodata;
+				TargetAttributes = {
+					B691A0531DFACFFD003F1397 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WA8PPHG7NM;
+						ProvisioningStyle = Automatic;
+					};
+					B691A0671DFACFFD003F1397 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WA8PPHG7NM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B691A0531DFACFFD003F1397;
+					};
+					B691A0721DFACFFD003F1397 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = WA8PPHG7NM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B691A0531DFACFFD003F1397;
+					};
+				};
+			};
+			buildConfigurationList = B691A04F1DFACFFD003F1397 /* Build configuration list for PBXProject "DapandaAPIClientPrev1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B691A04B1DFACFFD003F1397;
+			productRefGroup = B691A0551DFACFFD003F1397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B691A0531DFACFFD003F1397 /* DapandaAPIClientPrev1 */,
+				B691A0671DFACFFD003F1397 /* DapandaAPIClientPrev1Tests */,
+				B691A0721DFACFFD003F1397 /* DapandaAPIClientPrev1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B691A0521DFACFFD003F1397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B691A0621DFACFFD003F1397 /* LaunchScreen.storyboard in Resources */,
+				B691A05F1DFACFFD003F1397 /* Assets.xcassets in Resources */,
+				B691A05D1DFACFFD003F1397 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B691A0661DFACFFD003F1397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B691A0711DFACFFD003F1397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AF5FD6B9D34B4F0DB01A633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD1070015B809DC65284435 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DapandaAPIClientPrev1/Pods-DapandaAPIClientPrev1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A6C25A813C38D2025FF60F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DapandaAPIClientPrev1/Pods-DapandaAPIClientPrev1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B691A0501DFACFFD003F1397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E36C6B1DFB95F80003B3B4 /* CustomTableViewCell.swift in Sources */,
+				B6D85C471E6D925D003980EE /* Messages.swift in Sources */,
+				B64A83B21E2C43F400AEFD8B /* Mention.swift in Sources */,
+				B6D85C5D1E6E9EB5003980EE /* CommonResponse.swift in Sources */,
+				B6D85C591E6E6BBC003980EE /* ApiBaseProtcol.swift in Sources */,
+				B691A05A1DFACFFD003F1397 /* ViewController.swift in Sources */,
+				B6D85C511E6D9A48003980EE /* MessagesGetResponse.swift in Sources */,
+				B6E15DEA1DFC652D001745C3 /* EditViewController.swift in Sources */,
+				B6D85C491E6D9459003980EE /* ApiPostTelegram.swift in Sources */,
+				B691A0581DFACFFD003F1397 /* AppDelegate.swift in Sources */,
+				B6D85C4B1E6D94A7003980EE /* ApiTelegram.swift in Sources */,
+				B6E36C6D1DFBA39F0003B3B4 /* SelectChannnelViewController.swift in Sources */,
+				B6D85C5B1E6E9384003980EE /* CommonRequest.swift in Sources */,
+				B64A83B01E2C434400AEFD8B /* User.swift in Sources */,
+				B6D85C4D1E6D952F003980EE /* ApiGetTelegram.swift in Sources */,
+				B6D85C431E6D9135003980EE /* ApiBase.swift in Sources */,
+				B6D85C571E6E4F72003980EE /* ApiPutTelegram.swift in Sources */,
+				B6D85C551E6E4A65003980EE /* ApiDeleteTelegram.swift in Sources */,
+				B6D85C4F1E6D95D5003980EE /* MessagesGetRequest.swift in Sources */,
+				B6E36C6F1DFBD1320003B3B4 /* PostViewController.swift in Sources */,
+				B64A83AE1E2B3CF100AEFD8B /* Message.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B691A0641DFACFFD003F1397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B691A06D1DFACFFD003F1397 /* DapandaAPIClientPrev1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B691A06F1DFACFFD003F1397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B691A0781DFACFFD003F1397 /* DapandaAPIClientPrev1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B691A06A1DFACFFD003F1397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B691A0531DFACFFD003F1397 /* DapandaAPIClientPrev1 */;
+			targetProxy = B691A0691DFACFFD003F1397 /* PBXContainerItemProxy */;
+		};
+		B691A0751DFACFFD003F1397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B691A0531DFACFFD003F1397 /* DapandaAPIClientPrev1 */;
+			targetProxy = B691A0741DFACFFD003F1397 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B691A05B1DFACFFD003F1397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B691A05C1DFACFFD003F1397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B691A0601DFACFFD003F1397 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B691A0611DFACFFD003F1397 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B691A07A1DFACFFD003F1397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B691A07B1DFACFFD003F1397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B691A07D1DFACFFD003F1397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6D6F8DEE579AD033EEA390 /* Pods-DapandaAPIClientPrev1.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WA8PPHG7NM;
+				INFOPLIST_FILE = DapandaAPIClientPrev1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinokodata.DapandaAPIClientPrev1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B691A07E1DFACFFD003F1397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 695E92AE6544950CE896D424 /* Pods-DapandaAPIClientPrev1.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WA8PPHG7NM;
+				INFOPLIST_FILE = DapandaAPIClientPrev1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinokodata.DapandaAPIClientPrev1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B691A0801DFACFFD003F1397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WA8PPHG7NM;
+				INFOPLIST_FILE = DapandaAPIClientPrev1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinokodata.DapandaAPIClientPrev1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DapandaAPIClientPrev1.app/DapandaAPIClientPrev1";
+			};
+			name = Debug;
+		};
+		B691A0811DFACFFD003F1397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WA8PPHG7NM;
+				INFOPLIST_FILE = DapandaAPIClientPrev1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinokodata.DapandaAPIClientPrev1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DapandaAPIClientPrev1.app/DapandaAPIClientPrev1";
+			};
+			name = Release;
+		};
+		B691A0831DFACFFD003F1397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WA8PPHG7NM;
+				INFOPLIST_FILE = DapandaAPIClientPrev1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinokodata.DapandaAPIClientPrev1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DapandaAPIClientPrev1;
+			};
+			name = Debug;
+		};
+		B691A0841DFACFFD003F1397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WA8PPHG7NM;
+				INFOPLIST_FILE = DapandaAPIClientPrev1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinokodata.DapandaAPIClientPrev1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DapandaAPIClientPrev1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B691A04F1DFACFFD003F1397 /* Build configuration list for PBXProject "DapandaAPIClientPrev1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B691A07A1DFACFFD003F1397 /* Debug */,
+				B691A07B1DFACFFD003F1397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B691A07C1DFACFFD003F1397 /* Build configuration list for PBXNativeTarget "DapandaAPIClientPrev1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B691A07D1DFACFFD003F1397 /* Debug */,
+				B691A07E1DFACFFD003F1397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B691A07F1DFACFFD003F1397 /* Build configuration list for PBXNativeTarget "DapandaAPIClientPrev1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B691A0801DFACFFD003F1397 /* Debug */,
+				B691A0811DFACFFD003F1397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B691A0821DFACFFD003F1397 /* Build configuration list for PBXNativeTarget "DapandaAPIClientPrev1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B691A0831DFACFFD003F1397 /* Debug */,
+				B691A0841DFACFFD003F1397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B691A04C1DFACFFD003F1397 /* Project object */;
+}
