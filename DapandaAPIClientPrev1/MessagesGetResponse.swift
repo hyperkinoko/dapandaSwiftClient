@@ -17,6 +17,11 @@ class MessagesGetResponse: ApiGetTelegram {
         
     }
     
+    override init() {
+        result = nil
+        super.init()
+    }
+    
     override func mapping(map: Map) {
         super.mapping(map: map)
         result <- map["result"]

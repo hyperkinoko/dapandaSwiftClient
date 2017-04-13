@@ -145,61 +145,22 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func getMessages(channelId: String) -> [Message]? {
-        var messages: [Message] = []
-//        let messagesApi: Messages = Messages()
+        let messagesApi: Messages = Messages()
         let request: MessagesGetRequest = MessagesGetRequest()
         request.channelId = channelId
         request.limit = "4"
-        let semaphore = DispatchSemaphore(value: 0)
+//        let semaphore = DispatchSemaphore(value: 0)
         
-        // requestからURLに乗せるデータを作る
-        let url = URL(string: "http://www.dapanda.jp:8080/dapanda/MainServlet?api=Messages&token=dummy&lang=ja&channelId=\(channelId)")
-        print(url!)
-        
-        let urlRequest = URLRequest(url: url!)
-        let configuration = URLSessionConfiguration.default
-        let session = URLSession(configuration: configuration)
-        
-        let task = session.dataTask(with: urlRequest, completionHandler: {
-            (data, request, error) in
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
-                print(json)
-                
-                // MessageGetResponseの部分はreflectionを使う
-                let response: CommonResponse = Mapper<CommonResponse<MessagesGetResponse>>().map(JSON: json)!
-                //                print(response)
-                messages = (response.response?.result!)!
-                print(messages)
-            } catch {
-                print("ERROR!! json parse error")
-            }
-            semaphore.signal()
-            
-        })
-        task.resume()
-        
-//        messagesApi.send(request: request, resultHandler: {(respons: ApiGetTelegram?, error: Error?) -> () in
-//            if let res = respons as! MessagesGetResponse? {
-//                messages = res.result
-//                semaphore.signal()
-//            } else {
-//                messages = nil
-//                semaphore.signal()
-//            }
-//            if let _ = error {
-//                print(error!)
-//                messages = nil
-//                semaphore.signal()
-//            }
-//        })
-        
-        // この処理をする
+        // この処理は時間がかかる
         // @Todo メインスレッドで実行するとデッドロックになる可能性あるのでなんとかする
-        semaphore.wait()
-//        print(messages)
-        return messages
+        let response: MessagesGetResponse = messagesApi.send(request: request)
+        
+        // responseが得られてから
+        if let result = response.result {
+            return result
+        } else {
+            return nil
+        }
     }
     
 }
