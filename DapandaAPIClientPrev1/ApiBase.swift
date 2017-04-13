@@ -47,6 +47,7 @@ class ApiBase {
             urlString += "&token=\(commonRequest.token)&lang=\(commonRequest.lang)"
             
             // ここでURLにデータを乗せる
+            
             urlString += "&channelId=channelid001"
             
             print(urlString)
@@ -71,7 +72,7 @@ class ApiBase {
             let messagesJson: String = json.rawString()!
             //            print(messagesJson)
             
-            let commonResponse: CommonResponse = Mapper<CommonResponse>().map(JSONString: messagesJson)!
+            let commonResponse: CommonResponse = Mapper<CommonResponse<ApiTelegram>>().map(JSONString: messagesJson)!
             resultHandler(commonResponse.response!, nil)
             print()
         })

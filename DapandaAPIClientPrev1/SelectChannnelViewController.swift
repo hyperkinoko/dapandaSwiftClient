@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import SwiftyJSON
+import ObjectMapper
 
 class SelectChannnelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var channelList : [(channelId: String, name: String)] = []
+    var channelList : [Channel] = []
     var channelData : (channelId: String, name: String)?
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class SelectChannnelViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func reloadCannel(memberId: String) {
-        let url = Foundation.URL(string: "http://www.dapanda.jp:8080/dapanda/MainServlet?api=Channels&token=dummy&lang=ja&memberId=\(memberId)")
+        let url = Foundation.URL(string: "http://www.dapanda.jp:8080/dapanda/MainServlet?api=Channels&memberId=\(memberId)&token=dummy&lang=ja")
         print(url!)
         
         let request = URLRequest(url: url!)
@@ -45,20 +45,16 @@ class SelectChannnelViewController: UIViewController, UITableViewDataSource, UIT
         let task = session.dataTask(with: request, completionHandler: {
             (data, request, Error) in
             
-            let json = JSON(data: data!)
-            let channels: Array<JSON> = json["response"]["result"].arrayValue
-            print(channels.count)
-            
-            for channel in channels {
-                let id = channel["channelId"].stringValue
-                let name = channel["name"].stringValue
-                
-                let channelTuple = (id, name)
-                self.channelList.append(channelTuple)
-                print("data = \(channelTuple)")
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+                print(json)
+                let response: CommonResponse = Mapper<CommonResponse<ChannelsGetResponse>>().map(JSON: json)!
+                self.channelList = (response.response?.result)!
+                self.tableView.reloadData()
+            } catch {
+                print("ERROR!! json parse error")
             }
             
-            self.tableView.reloadData()
         })
         task.resume()
     
@@ -79,7 +75,7 @@ class SelectChannnelViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        channelData = (channelList[indexPath.row].channelId, channelList[indexPath.row].name)
+        channelData = (channelList[indexPath.row].channelId!, channelList[indexPath.row].name!)
         self.performSegue(withIdentifier: "goMessageList", sender: nil)
     }
     

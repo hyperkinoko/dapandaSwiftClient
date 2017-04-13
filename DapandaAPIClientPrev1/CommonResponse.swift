@@ -9,10 +9,10 @@
 import Foundation
 import ObjectMapper
 
-class CommonResponse: Mappable {
+class CommonResponse<T: ApiTelegram>: Mappable {
     
     var token: String?
-    var response: ApiTelegram?
+    var response: T?
     var lang: String?
     var status: String?
     var code: Int?

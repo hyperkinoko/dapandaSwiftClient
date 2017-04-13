@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 import ObjectMapper
 
 class ViewController: UIViewController, UITableViewDataSource {
@@ -40,29 +39,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func reloadMessages(channelId: String) {
         messageList.removeAll()
-        
-        let url = URL(string: "http://www.dapanda.jp:8080/dapanda/MainServlet?api=Messages&token=dummy&lang=ja&channelId=\(channelId)")
-        print(url!)
-        
-        let request = URLRequest(url: url!)
-        let configuration = URLSessionConfiguration.default
-        let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
-        
-        let task = session.dataTask(with: request, completionHandler: {
-            (data, request, error) in
-            
-            let json = JSON(data: data!)
-            let messagesJson: String = json.rawString()!
-//            print(messagesJson)
-            
-            let commonResponse: CommonResponse = Mapper<CommonResponse>().map(JSONString: messagesJson)!
-            print(commonResponse)
-            //self.messageList = Mapper<Message>().mapArray(JSONString: messagesJson)!
-            let response = commonResponse.response as! MessagesGetResponse
-            self.messageList = response.result!
-            self.tableView.reloadData()
-        })
-        task.resume()
+        messageList = getMessages(channelId: channelId)!
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -118,8 +96,8 @@ class ViewController: UIViewController, UITableViewDataSource {
             print("削除ボタンが押された at row: \(row)")
             
             // DELETEリクエスト発行
-            let messageId = self.messageList[row].messageId
-            let url = URL(string: "http://10.211.55.3:8080/dapanda/MainServlet?api=Messages&token=dummy&lang=ja&messageId=\(messageId)")
+            let messageId = self.messageList[row].messageId!
+            let url = URL(string: "http://www.dapanda.jp:8080/dapanda/MainServlet?api=Messages&token=dummy&lang=ja&messageId=\(messageId)")
             print(url!)
             
             var request = URLRequest(url: url!)
@@ -128,19 +106,27 @@ class ViewController: UIViewController, UITableViewDataSource {
             let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
             let task = session.dataTask(with: request, completionHandler: {
                 (data, request, error) in
-                let json = JSON(data: data!)
-                let status = json["status"].stringValue
-                print(status)
-                if status == "SUCCESS" {
-                    print("削除しました")
-                    self.reloadMessages(channelId: (self.channelData?.channelId)!)
-                } else {
-                    print("削除に失敗しました")
-                    let alertController = UIAlertController(title: "失敗", message: "削除に失敗しました", preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    //                        self.textView.text.removeAll()
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+                    print(json)
+                    
+                    let response: CommonResponse = Mapper<CommonResponse<MessagesDeleteResponse>>().map(JSON: json)!
+                    //                print(response)
+                    let status = response.response?.result!
+                    print(status!)
+                    if (status!) {
+                        print("削除しました")
+                        self.reloadMessages(channelId: (self.channelData?.channelId)!)
+                    } else {
+                        print("削除に失敗しました")
+                        let alertController = UIAlertController(title: "失敗", message: "削除に失敗しました", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
+                        //                        self.textView.text.removeAll()
+                    }
+                } catch {
+                    print("ERROR!! json parse error")
                 }
             })
             task.resume()
@@ -159,26 +145,60 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func getMessages(channelId: String) -> [Message]? {
-        var messages: [Message]?
-        let messagesApi: Messages = Messages()
+        var messages: [Message] = []
+//        let messagesApi: Messages = Messages()
         let request: MessagesGetRequest = MessagesGetRequest()
         request.channelId = channelId
         request.limit = "4"
+        let semaphore = DispatchSemaphore(value: 0)
         
-        // この処理をしてから
-        messagesApi.send(request: request, resultHandler: {(respons: ApiGetTelegram?, error: Error?) -> () in
-            if let res = respons as! MessagesGetResponse? {
-                messages = res.result
-            } else {
-                messages = nil
+        // requestからURLに乗せるデータを作る
+        let url = URL(string: "http://www.dapanda.jp:8080/dapanda/MainServlet?api=Messages&token=dummy&lang=ja&channelId=\(channelId)")
+        print(url!)
+        
+        let urlRequest = URLRequest(url: url!)
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration)
+        
+        let task = session.dataTask(with: urlRequest, completionHandler: {
+            (data, request, error) in
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+                print(json)
+                
+                // MessageGetResponseの部分はreflectionを使う
+                let response: CommonResponse = Mapper<CommonResponse<MessagesGetResponse>>().map(JSON: json)!
+                //                print(response)
+                messages = (response.response?.result!)!
+                print(messages)
+            } catch {
+                print("ERROR!! json parse error")
             }
-            if let _ = error {
-                print(error!)
-                messages = nil
-            }
+            semaphore.signal()
+            
         })
+        task.resume()
+        
+//        messagesApi.send(request: request, resultHandler: {(respons: ApiGetTelegram?, error: Error?) -> () in
+//            if let res = respons as! MessagesGetResponse? {
+//                messages = res.result
+//                semaphore.signal()
+//            } else {
+//                messages = nil
+//                semaphore.signal()
+//            }
+//            if let _ = error {
+//                print(error!)
+//                messages = nil
+//                semaphore.signal()
+//            }
+//        })
         
         // この処理をする
+        // @Todo メインスレッドで実行するとデッドロックになる可能性あるのでなんとかする
+        semaphore.wait()
+//        print(messages)
         return messages
     }
     

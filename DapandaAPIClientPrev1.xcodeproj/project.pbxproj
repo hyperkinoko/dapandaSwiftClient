@@ -10,6 +10,9 @@
 		B64A83AE1E2B3CF100AEFD8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83AD1E2B3CF100AEFD8B /* Message.swift */; };
 		B64A83B01E2C434400AEFD8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83AF1E2C434400AEFD8B /* User.swift */; };
 		B64A83B21E2C43F400AEFD8B /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83B11E2C43F400AEFD8B /* Mention.swift */; };
+		B685308D1E8B6EAA00D00BF4 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685308C1E8B6EAA00D00BF4 /* Channel.swift */; };
+		B68530911E8B821000D00BF4 /* ChannelsGetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68530901E8B821000D00BF4 /* ChannelsGetResponse.swift */; };
+		B68530931E8BA57F00D00BF4 /* MessagesDeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68530921E8BA57F00D00BF4 /* MessagesDeleteResponse.swift */; };
 		B691A0581DFACFFD003F1397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691A0571DFACFFD003F1397 /* AppDelegate.swift */; };
 		B691A05A1DFACFFD003F1397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691A0591DFACFFD003F1397 /* ViewController.swift */; };
 		B691A05D1DFACFFD003F1397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B691A05B1DFACFFD003F1397 /* Main.storyboard */; };
@@ -60,6 +63,9 @@
 		B64A83AD1E2B3CF100AEFD8B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B64A83AF1E2C434400AEFD8B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B64A83B11E2C43F400AEFD8B /* Mention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mention.swift; sourceTree = "<group>"; };
+		B685308C1E8B6EAA00D00BF4 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		B68530901E8B821000D00BF4 /* ChannelsGetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsGetResponse.swift; sourceTree = "<group>"; };
+		B68530921E8BA57F00D00BF4 /* MessagesDeleteResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesDeleteResponse.swift; sourceTree = "<group>"; };
 		B691A0541DFACFFD003F1397 /* DapandaAPIClientPrev1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DapandaAPIClientPrev1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B691A0571DFACFFD003F1397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B691A0591DFACFFD003F1397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +218,9 @@
 				B64A83B11E2C43F400AEFD8B /* Mention.swift */,
 				B6D85C4E1E6D95D5003980EE /* MessagesGetRequest.swift */,
 				B6D85C501E6D9A48003980EE /* MessagesGetResponse.swift */,
+				B685308C1E8B6EAA00D00BF4 /* Channel.swift */,
+				B68530901E8B821000D00BF4 /* ChannelsGetResponse.swift */,
+				B68530921E8BA57F00D00BF4 /* MessagesDeleteResponse.swift */,
 			);
 			name = dapandaSwift;
 			sourceTree = "<group>";
@@ -423,15 +432,18 @@
 				B6D85C511E6D9A48003980EE /* MessagesGetResponse.swift in Sources */,
 				B6E15DEA1DFC652D001745C3 /* EditViewController.swift in Sources */,
 				B6D85C491E6D9459003980EE /* ApiPostTelegram.swift in Sources */,
+				B68530931E8BA57F00D00BF4 /* MessagesDeleteResponse.swift in Sources */,
 				B691A0581DFACFFD003F1397 /* AppDelegate.swift in Sources */,
 				B6D85C4B1E6D94A7003980EE /* ApiTelegram.swift in Sources */,
 				B6E36C6D1DFBA39F0003B3B4 /* SelectChannnelViewController.swift in Sources */,
 				B6D85C5B1E6E9384003980EE /* CommonRequest.swift in Sources */,
+				B685308D1E8B6EAA00D00BF4 /* Channel.swift in Sources */,
 				B64A83B01E2C434400AEFD8B /* User.swift in Sources */,
 				B6D85C4D1E6D952F003980EE /* ApiGetTelegram.swift in Sources */,
 				B6D85C431E6D9135003980EE /* ApiBase.swift in Sources */,
 				B6D85C571E6E4F72003980EE /* ApiPutTelegram.swift in Sources */,
 				B6D85C551E6E4A65003980EE /* ApiDeleteTelegram.swift in Sources */,
+				B68530911E8B821000D00BF4 /* ChannelsGetResponse.swift in Sources */,
 				B6D85C4F1E6D95D5003980EE /* MessagesGetRequest.swift in Sources */,
 				B6E36C6F1DFBD1320003B3B4 /* PostViewController.swift in Sources */,
 				B64A83AE1E2B3CF100AEFD8B /* Message.swift in Sources */,
