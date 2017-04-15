@@ -6,6 +6,8 @@
 //  Copyright © 2017年 kinokodata. All rights reserved.
 //
 
+// フィールドとイニシャライザ、ObjectMapperのためのメソッドを持つ
+// 自動生成される
 import Foundation
 import ObjectMapper
 

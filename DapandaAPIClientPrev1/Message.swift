@@ -6,6 +6,8 @@
 //  Copyright © 2017年 kinokodata. All rights reserved.
 //
 
+// フィールドとイニシャライザ、ObjectMapperのためのメソッドを持つ
+// 自動生成される
 import Foundation
 import ObjectMapper
 
@@ -34,7 +36,8 @@ class Message: Mappable {
         editedTime <- map["editedTime"]
     }
     
-    init(t_owner: String, t_content: String, t_channelId: String) {
+    // 自動生成の性質上、以下は追加できない
+    /*init(t_owner: String, t_content: String, t_channelId: String) {
         messageId = "dummymessageId"
         messageOwner = User(t_userId: "superkinoko")
         createTime = "2017-01-05 13:38:48"
@@ -51,5 +54,5 @@ class Message: Mappable {
         mimeType = t_mimeType
         channelId = t_channelId
         editedTime = t_editedTime
-    }
+    }*/
 }

@@ -35,10 +35,20 @@ class Messages {
         urlString += commonRequest.lang!
         
         // ここから、property一覧を得て、中身がnilでなければurlにデータをくっつけていく
-        if let value = request.channelId {
-            urlString += "&channelId="
-            urlString += value
+        let mirror = Mirror(reflecting: request)
+        for element in mirror.children {
+            if let value = element.value as? String {
+                urlString += "&\(element.label!)="
+                urlString += value
+            }
         }
+        // こっちのほうが書き方としてはエレガント
+        /*mirror.children.forEach {
+            if let value = $0.value as? String {
+                urlString += “&\($0.label!)="
+                urlString += value
+            }
+        }*/
         
         print(urlString)
         let url = URL(string: urlString)

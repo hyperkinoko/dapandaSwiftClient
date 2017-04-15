@@ -152,7 +152,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 //        let semaphore = DispatchSemaphore(value: 0)
         
         // この処理は時間がかかる
-        // @Todo メインスレッドで実行するとデッドロックになる可能性あるのでなんとかする
+        // @Todo 調査：メインスレッドで実行するとデッドロックになる可能性ある?
         let response: MessagesGetResponse = messagesApi.send(request: request)
         
         // responseが得られてから

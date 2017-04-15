@@ -9,6 +9,8 @@
 import Foundation
 import ObjectMapper
 
+// フィールドとイニシャライザ、ObjectMapperのためのメソッドを持つ
+// 自動生成される
 class Mention: Mappable {
     var id : String?
     

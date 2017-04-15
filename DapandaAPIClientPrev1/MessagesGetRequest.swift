@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-// フィールドとsetter, getterのみを持つ
+// フィールドとイニシャライザ、ObjectMapperのためのメソッドを持つ
 // 自動生成される
 class MessagesGetRequest: ApiGetTelegram {
     
@@ -33,16 +33,7 @@ class MessagesGetRequest: ApiGetTelegram {
         limit = nil
         super.init()
     }
-    
-    /*init(channelId: String) {
-        self.channelId = channelId
-        self.messageId = nil
-        self.limit = nil
-        self.postedDateTo = nil
-        self.postedDateFrom = nil
-        self.userId = nil
-    }*/
-    
+        
     override func mapping(map: Map) {
         super.mapping(map: map)
         messageId <- map["messageId"]
