@@ -7,9 +7,20 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class CommonRequest {
+class CommonRequest<T: ApiTelegram>: Mappable {
     var token: String?
     var lang: String?
     var request: ApiTelegram?
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        token <- map["token"]
+        lang <- map["lang"]
+        request <- map["request"]
+    }
 }
