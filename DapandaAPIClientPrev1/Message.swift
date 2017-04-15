@@ -21,6 +21,7 @@ class Message: Mappable {
     var channelId: String?
     var editedTime: String?
     
+    
     required init?(map: Map) {
         
     }
