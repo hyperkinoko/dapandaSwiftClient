@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60F1FF9A1EA23AE4000DDA0E /* MessagesDeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1FF991EA23AE4000DDA0E /* MessagesDeleteRequest.swift */; };
+		60F1FF9D1EA23BA9000DDA0E /* MessagesPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1FF9B1EA23BA9000DDA0E /* MessagesPostRequest.swift */; };
+		60F1FF9E1EA23BA9000DDA0E /* MessagesPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1FF9C1EA23BA9000DDA0E /* MessagesPostResponse.swift */; };
+		60F1FFA01EA23E40000DDA0E /* MessagesPutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1FF9F1EA23E40000DDA0E /* MessagesPutRequest.swift */; };
+		60F1FFA21EA23E4E000DDA0E /* MessagesPutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1FFA11EA23E4E000DDA0E /* MessagesPutResponse.swift */; };
 		B64A83AE1E2B3CF100AEFD8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83AD1E2B3CF100AEFD8B /* Message.swift */; };
 		B64A83B01E2C434400AEFD8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83AF1E2C434400AEFD8B /* User.swift */; };
 		B64A83B21E2C43F400AEFD8B /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A83B11E2C43F400AEFD8B /* Mention.swift */; };
@@ -58,6 +63,11 @@
 
 /* Begin PBXFileReference section */
 		1D2EB26958BC780DF4EE57EF /* Pods_DapandaAPIClientPrev1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DapandaAPIClientPrev1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60F1FF991EA23AE4000DDA0E /* MessagesDeleteRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesDeleteRequest.swift; sourceTree = "<group>"; };
+		60F1FF9B1EA23BA9000DDA0E /* MessagesPostRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesPostRequest.swift; sourceTree = "<group>"; };
+		60F1FF9C1EA23BA9000DDA0E /* MessagesPostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesPostResponse.swift; sourceTree = "<group>"; };
+		60F1FF9F1EA23E40000DDA0E /* MessagesPutRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesPutRequest.swift; sourceTree = "<group>"; };
+		60F1FFA11EA23E4E000DDA0E /* MessagesPutResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesPutResponse.swift; sourceTree = "<group>"; };
 		695E92AE6544950CE896D424 /* Pods-DapandaAPIClientPrev1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DapandaAPIClientPrev1.release.xcconfig"; path = "Pods/Target Support Files/Pods-DapandaAPIClientPrev1/Pods-DapandaAPIClientPrev1.release.xcconfig"; sourceTree = "<group>"; };
 		7F6D6F8DEE579AD033EEA390 /* Pods-DapandaAPIClientPrev1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DapandaAPIClientPrev1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DapandaAPIClientPrev1/Pods-DapandaAPIClientPrev1.debug.xcconfig"; sourceTree = "<group>"; };
 		B64A83AD1E2B3CF100AEFD8B /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -212,6 +222,8 @@
 		B6D85C531E6DA116003980EE /* dapandaSwift */ = {
 			isa = PBXGroup;
 			children = (
+				60F1FF9B1EA23BA9000DDA0E /* MessagesPostRequest.swift */,
+				60F1FF9C1EA23BA9000DDA0E /* MessagesPostResponse.swift */,
 				B64A83AD1E2B3CF100AEFD8B /* Message.swift */,
 				B6D85C461E6D925D003980EE /* Messages.swift */,
 				B64A83AF1E2C434400AEFD8B /* User.swift */,
@@ -221,6 +233,9 @@
 				B685308C1E8B6EAA00D00BF4 /* Channel.swift */,
 				B68530901E8B821000D00BF4 /* ChannelsGetResponse.swift */,
 				B68530921E8BA57F00D00BF4 /* MessagesDeleteResponse.swift */,
+				60F1FF991EA23AE4000DDA0E /* MessagesDeleteRequest.swift */,
+				60F1FF9F1EA23E40000DDA0E /* MessagesPutRequest.swift */,
+				60F1FFA11EA23E4E000DDA0E /* MessagesPutResponse.swift */,
 			);
 			name = dapandaSwift;
 			sourceTree = "<group>";
@@ -424,10 +439,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E36C6B1DFB95F80003B3B4 /* CustomTableViewCell.swift in Sources */,
+				60F1FFA21EA23E4E000DDA0E /* MessagesPutResponse.swift in Sources */,
+				60F1FF9E1EA23BA9000DDA0E /* MessagesPostResponse.swift in Sources */,
+				60F1FF9D1EA23BA9000DDA0E /* MessagesPostRequest.swift in Sources */,
 				B6D85C471E6D925D003980EE /* Messages.swift in Sources */,
 				B64A83B21E2C43F400AEFD8B /* Mention.swift in Sources */,
 				B6D85C5D1E6E9EB5003980EE /* CommonResponse.swift in Sources */,
 				B6D85C591E6E6BBC003980EE /* ApiBaseProtcol.swift in Sources */,
+				60F1FF9A1EA23AE4000DDA0E /* MessagesDeleteRequest.swift in Sources */,
 				B691A05A1DFACFFD003F1397 /* ViewController.swift in Sources */,
 				B6D85C511E6D9A48003980EE /* MessagesGetResponse.swift in Sources */,
 				B6E15DEA1DFC652D001745C3 /* EditViewController.swift in Sources */,
@@ -437,6 +456,7 @@
 				B6D85C4B1E6D94A7003980EE /* ApiTelegram.swift in Sources */,
 				B6E36C6D1DFBA39F0003B3B4 /* SelectChannnelViewController.swift in Sources */,
 				B6D85C5B1E6E9384003980EE /* CommonRequest.swift in Sources */,
+				60F1FFA01EA23E40000DDA0E /* MessagesPutRequest.swift in Sources */,
 				B685308D1E8B6EAA00D00BF4 /* Channel.swift in Sources */,
 				B64A83B01E2C434400AEFD8B /* User.swift in Sources */,
 				B6D85C4D1E6D952F003980EE /* ApiGetTelegram.swift in Sources */,
