@@ -23,9 +23,13 @@ class ApiBase {
 
     let delegate: ApiBaseProtcol? = nil
     
-    /*init() {
+    func getApiName() -> String {
+        return "";
+    }
+    
+    init() {
         delegate = nil
-    }*/
+    }
     
     func sendTo(request: MessagesGetRequest) -> MessagesGetResponse {
         var response: MessagesGetResponse = MessagesGetResponse()
@@ -46,19 +50,12 @@ class ApiBase {
         
         // ここから、property一覧を得て、中身がnilでなければurlにデータをくっつけていく
         let mirror = Mirror(reflecting: request)
-        for element in mirror.children {
-            if let value = element.value as? String {
-                urlString += "&\(element.label!)="
-                urlString += value
-            }
-        }
-        // こっちのほうが書き方としてはエレガント
-        /*mirror.children.forEach {
+        mirror.children.forEach {
          if let value = $0.value as? String {
-         urlString += “&\($0.label!)="
+         urlString += "&\($0.label!)="
          urlString += value
          }
-         }*/
+        }
         
         print(urlString)
         let url = URL(string: urlString)
@@ -101,13 +98,14 @@ class ApiBase {
 
         // まずURLのStringを作る
         let apiName = delegate?.getApiName()
-        var urlString = "http://www.dapanda.jp:8080/dapanda/MainServlet?api=\(apiName)"
+        var urlString = "http://www.dapanda.jp:8080/dapanda/MainServlet?api=\(apiName ?? "")"
 
         switch method {
         case .get, .delete:
             // GETとDELETEはURLにデータを乗せる
             print("This is GET or Delete method.")
-            urlString += "&token=\(commonRequest.token)&lang=\(commonRequest.lang)"
+            urlString += "&token=" + commonRequest.token!
+            urlString += "&lang=" + commonRequest.lang!
             
             // ここでURLにデータを乗せる
             

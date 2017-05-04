@@ -13,27 +13,33 @@ import ObjectMapper
 // Java版では手書きだが、クライアント側の場合、ここを自動生成するべきか
 //class Messages: ApiBase, ApiBaseProtcol {
 class Messages {
-    func getApiName() -> String {
+/*
+    override func getApiName() -> String {
         return "Messages"
     }
+ */
+    var apiBase: ApiBase = ApiBase()
     
     func send(request: MessagesGetRequest) -> MessagesGetResponse {
-        super.sendTo(request: request, httpMethod: String)
+        let telegram: ApiTelegram = request
+        //super.sendTo(request: telegram, httpMethod: HTTPMethod.get)
+        apiBase.sendTo(request: telegram, httpMethod: ApiBase.HTTPMethod.get)
     }
 
     func send(request: MessagesPutRequest) -> MessagesPutResponse {
-        super.sendTo(request: request, httpMethod: String)
-        
+        //super.sendTo(request: request, httpMethod: HTTPMethod.put)
+        apiBase.sendTo(request: request, httpMethod: ApiBase.HTTPMethod.put)
     }
 
     func send(request: MessagesPostRequest) -> MessagesPostResponse {
-        super.sendTo(request: ApiPostTelegram, httpMethod: String)
+        //super.sendTo(request: ApiPostTelegram, httpMethod: ApiBase.HTTPMethod.post)
+        apiBase.sendTo(request: ApiPostTelegram, httpMethod: ApiBase.HTTPMethod.post)
         
     }
 
     func send(request: MessagesDeleteRequest) -> MessagesDeleteResponse {
-        super.sendTo(request: ApiDeleteTelegram, httpMethod: String)
-        
+        //super.sendTo(request: ApiDeleteTelegram, httpMethod: ApiBase.HTTPMethod.delete)
+        apiBase.sendTo(request: ApiDeleteTelegram, httpMethod: ApiaBase.HTTPMethod.delete)
     }
 
 }
